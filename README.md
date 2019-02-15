@@ -15,7 +15,7 @@ _A program that counts how many times a word occurs in a sentence._
 |1.| User input English alphabetical word and sentence  | I like pie, like   | 1 |
 |2.| User input non-alphabetical word and alphabetical sentence  | swimming is great!, $!$   | Not Valid   |
 |3.| User input sentence and a word not in the sentence  | swimming is great!, crazy   | 0  |
-|4.| User input a sentence and word doesn't full match one of the words in the sentence | I had a great team week, tea | 0 |
+|4.| User input a sentence and word doesn't full match one of the words in the sentence | I stared at the sky, stare | 0 |
 
 
 ## Setup/Installation Requirements
