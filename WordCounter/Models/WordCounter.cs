@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace WordCounter
 {
   public class CountWords
