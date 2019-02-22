@@ -7,10 +7,12 @@ namespace WordCounter.Tests
   public class WordCounterTest
   {
     [TestMethod]
-    public void IsWordtrue()
+    public void IsUserInputString()
     {
-      IsWord testWord = new IsWord();
-      Assert.AreEqual(false,testWord.IsWordtrue())
+      string testWord="hello";
+      string testSentence="My name is jimmy";
+      CountWords testWordCount = new CountWords();
+       Assert.AreEqual(true, testWordCount.WordCounter(testWord));
 
     }
   }
