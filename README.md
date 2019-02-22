@@ -19,7 +19,7 @@ _A program that counts how many times a word occurs in a sentence._
 
 ## Setup/Installation Requirements
 
-mcs Program.cs Models/RepeatCounter.cs , mono Program.exe
+mcs Program.cs Models/WordCounter.cs , mono Program.exe
 
 ## Technologies Used
 
