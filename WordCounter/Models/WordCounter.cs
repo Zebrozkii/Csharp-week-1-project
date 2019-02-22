@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace WordCounter
+namespace  WordCounter.Models
 {
   public class CountWords
   {
