@@ -2,19 +2,13 @@
 
 <h1>Word Counter</h1>
 
-<ul>
-@if (Model.Count == 0)
+@foreach (CountWords item in Model)
 {
-  <p>You have no past work!</p>
+<h1>Word:@item.UserWord()</h1>
+<h1>Sentence:@item.UserSentence()</h1>
+<h1>Count:@item.WordCount()</h1>
 }
-@if(Model.Count != 0)
-{
-  @foreach (CountWords item in Model)
-  {
-    <li><a href='/items/@item.GetId()'>@item.Get()</a></li>
-  }
-}
-</ul>
+
 
 <a href="/items/new">Add a new item.</a>
 

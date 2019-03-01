@@ -17,7 +17,7 @@ namespace WordCounter.Controllers
     public ActionResult Create(string sentence, string word)
     {
         CountWords myItem = new CountWords(word,sentence);
-        int number = myItem.CountWords(word,sentence);
+        int number = myItem.WordCount();
         return RedirectToAction("Index");
     }
 
@@ -34,12 +34,12 @@ namespace WordCounter.Controllers
         return View();
     }
 
-    [HttpGet("/items/{id}")]
-    public ActionResult Show(int id)
-    {
-        CountWords item = CountWords.Find(id);
-        return View(item);
-    }
+    // [HttpGet("/items/{id}")]
+    // public ActionResult Show(int id)
+    // {
+    //     CountWords item = CountWords.Find(id);
+    //     return View(item);
+    // }
 
   }
 }

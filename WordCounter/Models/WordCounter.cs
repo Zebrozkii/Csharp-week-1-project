@@ -6,14 +6,14 @@ namespace  WordCounter.Models
   public class CountWords
   {
     private string _userInputWord;
-    private int _id;
+    // private int _id;
     private string _userInputSentence;
     private static List<CountWords> _instances = new List<CountWords>{};
 
     public CountWords( string word, string sentence){
       _userInputWord = word;
       _userInputSentence = sentence;
-      _id = _instances.Count;
+      _instances.Add(this);
     }
     public string UserSentence(){
 
@@ -24,18 +24,25 @@ namespace  WordCounter.Models
       return _userInputWord;
     }
 
-    public static List<CountWords>GetAll()
+    public static List<CountWords> GetAll()
     {
       return _instances;
     }
-    public int GetId()
-    {
-      return _id;
-    }
+    // public int GetId()
+    // {
+    //   return _id;
+    // }
     public static void ClearAll()
     {
       _instances.Clear();
     }
+
+    //
+    // public static CountWords Find(int searchId)
+    // {
+    //   return _instances[searchId-1];
+    // }
+
     public int WordCount(){
       int wordCount=0;
       string[] sentenceSplit=_userInputSentence.Split(' ');
