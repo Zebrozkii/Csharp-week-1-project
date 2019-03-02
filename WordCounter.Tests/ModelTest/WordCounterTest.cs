@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WordCounter;
+using WordCounter.Models;
 
 namespace WordCounter.Tests
 {
@@ -12,7 +12,7 @@ namespace WordCounter.Tests
     {
       string sentence="hello im jimmy";
       string word="jimmy";
-      CountWords test=new CountWords(word,sentence);
+      CountWords test = new CountWords(word,sentence);
       int count=test.WordCount();
       Assert.AreEqual(count,1);
     }
