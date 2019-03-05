@@ -37,7 +37,6 @@ namespace WordCounter
         {
           await context.Response.WriteAsync("Something went wrong!");
         });
-
     }
   }
 }

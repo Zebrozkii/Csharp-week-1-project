@@ -35,5 +35,17 @@ namespace WordCounter.Tests
       int count=test.WordCount();
       Assert.AreEqual(count,3);
     }
+    [TestMethod]
+    public void ConstructorTest()
+    {
+      string sentence = "hi im jimmy";
+      string word = "hi";
+      CountWords test = new CountWords(word,sentence);
+      string sentenceTest = test.UserSentence();
+      string wordTest = test.UserWord();
+      Assert.AreEqual(word, wordTest);
+      Assert.AreEqual(sentence,sentenceTest);
+
+    }
   }
 }

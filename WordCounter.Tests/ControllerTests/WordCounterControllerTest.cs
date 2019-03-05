@@ -19,16 +19,14 @@ namespace WordCounter.Tests
         //Assert
         Assert.IsInstanceOfType(indexView, typeof(ViewResult));
       }
-
       [TestMethod]
-      public void New_ReturnsCorrectView_True()
+      public void NewViewWorks()
       {
-        //Arrange
         WordCounterController controller = new WordCounterController();
-        //Act
-        ActionResult indexView = controller.New();
-        //Assert
-        Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+
+        ActionResult NewView = controller.New();
+
+        Assert.IsInstanceOfType(NewView,typeof(ViewResult));
       }
 
     }
