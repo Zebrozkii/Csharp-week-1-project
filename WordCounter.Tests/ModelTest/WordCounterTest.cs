@@ -36,6 +36,34 @@ namespace WordCounter.Tests
       Assert.AreEqual(count,3);
     }
     [TestMethod]
+    public void SingleLetterOneMatch()
+    {
+      string sentence="i";
+      string word="i";
+      CountWords test=new CountWords(word,sentence);
+      int count=test.WordCount();
+      Assert.AreEqual(count,1);
+    }
+    [TestMethod]
+    public void SingleLetterDoesntMatch()
+    {
+      string sentence="t";
+      string word="i";
+      CountWords test=new CountWords(word,sentence);
+      int count=test.WordCount();
+      Assert.AreEqual(count,0);
+    }
+    [TestMethod]
+    public void SingleLetterInWordDoesntMatch()
+    {
+      string sentence="Im jimmy";
+      string word="i";
+      CountWords test=new CountWords(word,sentence);
+      int count=test.WordCount();
+      Assert.AreEqual(count,0);
+    }
+
+    [TestMethod]
     public void ConstructorTest()
     {
       string sentence = "hi im jimmy";
